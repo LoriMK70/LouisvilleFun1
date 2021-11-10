@@ -18,7 +18,7 @@ namespace LouisvilleFun
             Activity activity5 = new Activity("Flying Axes", 20.00, "13+");
             MoreActivities activity6 = new Activity("Louisville Zoo", 10.50, "All ages", "Food Available");
             MoreActivities activity7 = new Activity("SLugger Museum", 16.00, "All ages", "Food Available");
-
+            MoreActivities activity8 = new Activity("The Caravan Comedy Club", 17.00, "18+", "Food Available");
 
 
 
@@ -36,4 +36,3 @@ namespace LouisvilleFun
         
 
     }
-}
