@@ -4,11 +4,9 @@ using System.Text;
 
 namespace LouisvilleFun
 {
-     public class MoreActivities
+     public class MoreActivities : Activity
     {
-            public string Name;
-            public double Price;
-            public string Age;
+            
             public string FoodAvailable;
 
             public Activity(string name, double price, string age, string food)
