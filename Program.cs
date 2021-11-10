@@ -14,6 +14,7 @@ namespace LouisvilleFun
             Activity activity5 = new Activity("Flying Axes", 20.00, "13+");
             MoreActivities activity6 = new Activity("Louisville Zoo", 10.50, "All ages", "Food Available");
             MoreActivities activity7 = new Activity("SLugger Museum", 16.00, "All ages", "Food Available");
+            MoreActivities activity8 = new Activity("The Comedy Caravan Club", 17.00, "18+", "Food Available");
 
 
             ActivityRepo activityrepo = new ActivityRepo();
@@ -27,10 +28,30 @@ namespace LouisvilleFun
             activityrepo.ActivityDictionary.Add(6, activity6);
             activityrepo.ActivityDictionary.Add(7, activity7);
 
-            foreach (var item in activityrepo.ActivityDictionary)
-            {
-                //do something here 
+            if (Age = "All Ages" &&  Food = "Food Available")
+                {
+
+                Console.WriteLine("Activites for all ages that serve food are" activity6 && activity7);
             }
+
+            else if (Age = "18+" && "21+" && Food = "Food Available")
+                {
+
+                Console.WriteLine("Activites for 18+ and 21+ that serve food are" activity8)  
+            }
+
+            else if (Age = "All ages")
+            {
+
+               Console.Write("Activities for all ages that do not serve food are" activity1 && activity4) 
+            }
+
+            else
+            {
+                Console.WriteLine("Activities with age restrictions that do not serve food are" activity2 && activity3 && activity5)
+
+            }    
+
 
         }
 
