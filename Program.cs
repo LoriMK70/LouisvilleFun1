@@ -12,9 +12,9 @@ namespace LouisvilleFun
             Activity activity3 = new Activity("Activate Games", 25.00, "10+");
             Activity activity4 = new Activity("Slugger Museum", 16.00, "All ages");
             Activity activity5 = new Activity("Flying Axes", 20.00, "13+");
-            MoreActivities activity6 = new Activity("Louisville Zoo", 10.50, "All ages", "Food Available");
-            MoreActivities activity7 = new Activity("SLugger Museum", 16.00, "All ages", "Food Available");
-            MoreActivities activity8 = new Activity("The Comedy Caravan Club", 17.00, "18+", "Food Available");
+            MoreActivities activity6 = new MoreActivities("Louisville Zoo", 10.50, "All ages", "Food Available");
+            MoreActivities activity7 = new MoreActivities("SLugger Museum", 16.00, "All ages", "Food Available");
+            MoreActivities activity8 = new MoreActivities("The Comedy Caravan Club", 17.00, "18+", "Food Available");
 
 
             ActivityRepo activityrepo = new ActivityRepo();
@@ -27,35 +27,24 @@ namespace LouisvilleFun
             activityrepo.ActivityDictionary.Add(5, activity5);
             activityrepo.ActivityDictionary.Add(6, activity6);
             activityrepo.ActivityDictionary.Add(7, activity7);
+            activityrepo.ActivityDictionary.Add(8, activity8);
 
-            if (Age = "All Ages" &&  Food = "Food Available")
-                {
+            var allAgeFoodActivies = activityrepo.ActivityDictionary
+                .Select(s => s.Value)
+                .Cast<MoreActivities>()
+                .Where(act => act.Age.Equals("All ages") &&
+                       act.FoodAvailable.Equals("Food Available"))
+                       .ToArray();
 
-                Console.WriteLine("Activites for all ages that serve food are" activity6 && activity7);
-                Console.ReadLine();
-            }
-
-            else if (Age = "18+" && "21+" && Food = "Food Available")
-                {
-
-                Console.WriteLine("Activites for 18+ and 21+ that serve food are" activity8);
-                Console.ReadLine();
-            }
-
-            else if (Age = "All ages")
+            Console.WriteLine("Activities for all ages that serve food are:");
+            foreach(var activity in allAgeFoodActivies)
             {
+                Console.WriteLine(activity.Name);
 
-                Console.Write("Activities for all ages that do not serve food are" activity1 && activity4);
-                Console.ReadLine();
-               
             }
 
-            else
-            {
-                Console.WriteLine("Activities with age restrictions that do not serve food are" activity2 && activity3 && activity5);
-                Console.ReadLine();
 
-            }    
+            
 
 
         }
