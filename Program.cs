@@ -32,23 +32,28 @@ namespace LouisvilleFun
                 {
 
                 Console.WriteLine("Activites for all ages that serve food are" activity6 && activity7);
+                Console.ReadLine();
             }
 
             else if (Age = "18+" && "21+" && Food = "Food Available")
                 {
 
-                Console.WriteLine("Activites for 18+ and 21+ that serve food are" activity8)  
+                Console.WriteLine("Activites for 18+ and 21+ that serve food are" activity8);
+                Console.ReadLine();
             }
 
             else if (Age = "All ages")
             {
 
-               Console.Write("Activities for all ages that do not serve food are" activity1 && activity4) 
+                Console.Write("Activities for all ages that do not serve food are" activity1 && activity4);
+                Console.ReadLine();
+               
             }
 
             else
             {
-                Console.WriteLine("Activities with age restrictions that do not serve food are" activity2 && activity3 && activity5)
+                Console.WriteLine("Activities with age restrictions that do not serve food are" activity2 && activity3 && activity5);
+                Console.ReadLine();
 
             }    
 
