@@ -16,9 +16,9 @@ namespace LouisvilleFun
             Activity activity3 = new Activity("Activate Games", 25.00, "10+");
             Activity activity4 = new Activity("Slugger Museum", 16.00, "All ages");
             Activity activity5 = new Activity("Flying Axes", 20.00, "13+");
-            MoreActivities activity6 = new Activity("Louisville Zoo", 10.50, "All ages", "Food Available");
-            MoreActivities activity7 = new Activity("SLugger Museum", 16.00, "All ages", "Food Available");
-            MoreActivities activity8 = new Activity("The Caravan Comedy Club", 17.00, "18+", "Food Available");
+            MoreActivities activity6 = new MoreActivities("Louisville Zoo", 10.50, "All ages", "Food Available");
+            MoreActivities activity7 = new MoreActivities("SLugger Museum", 16.00, "All ages", "Food Available");
+            MoreActivities activity8 = new MoreActivities("The Caravan Comedy Club", 17.00, "18+", "Food Available");
 
 
 
