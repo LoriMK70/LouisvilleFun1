@@ -30,9 +30,9 @@ namespace LouisvilleFun
             activityrepo.ActivityDictionary.Add(8, activity8);
 
             var allAgeFoodActivies = activityrepo.ActivityDictionary
-                .Select(s => s.Value)
-                .Cast<MoreActivities>()
-                .Where(act => act.Age.Equals("All ages") &&
+                    .Select(s => s.Value)
+                    .Cast<MoreActivities>()
+                    .Where(act => act.Age.Equals("All ages") &&
                        act.FoodAvailable.Equals("Food Available"))
                        .ToArray();
 
@@ -43,9 +43,47 @@ namespace LouisvilleFun
 
             }
 
+            var notAllAgeFoodActivies = activityrepo.ActivityDictionary
+                   .Select(s => s.Value)
+                   .Cast<MoreActivities>()
+                   .Where(act => act.Age.Equals("18+ && 21+") &&
+                      act.FoodAvailable.Equals("Food Available"))
+                      .ToArray();
 
-            
+            Console.WriteLine("Activities for ages 18+ that serve food are:");
+            foreach (var activity in notAllAgeFoodActivies)
+            {
+                Console.WriteLine(activity.Name);
 
+            }
+
+            var allAgeNoFoodActivies = activityrepo.ActivityDictionary
+                    .Select(s => s.Value)
+                    .Cast<MoreActivities>()
+                    .Where(act => act.Age.Equals("All ages") &&
+                           act.FoodAvailable.Equals(null))
+                          .ToArray();
+
+            Console.WriteLine("Activities for all ages that do not serve food are:");
+            foreach (var activity in allAgeFoodActivies)
+            {
+                Console.WriteLine(activity.Name);
+
+            }
+
+            var notAllAgeNoFoodActivies = activityrepo.ActivityDictionary
+                    .Select(s => s.Value)
+                    .Cast<MoreActivities>()
+                    .Where(act => act.Age.Equals("All ages") &&
+                           act.FoodAvailable.Equals(null))
+                          .ToArray();
+
+            Console.WriteLine("Activities for ages 18+ that do not serve food are:");
+            foreach (var activity in allAgeFoodActivies)
+            {
+                Console.WriteLine(activity.Name);
+
+            }
 
         }
 
