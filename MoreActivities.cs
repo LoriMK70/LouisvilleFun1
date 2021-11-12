@@ -7,7 +7,7 @@ namespace LouisvilleFun
      public class MoreActivities :  Activity
      {
             
-      public MoreActivities.(string name, double price, string age)      
+      public MoreActivities.(string name, double price, string age, string food)      
       
             this.FoodAvailable = food;
             
