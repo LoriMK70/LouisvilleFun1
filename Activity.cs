@@ -10,6 +10,8 @@ namespace LouisvilleFun
         public double Price;
         public string Age;
 
+        public Activity() { }
+
         public Activity(string name, double price, string age)
         {
             this.Name = name;
