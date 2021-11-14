@@ -51,7 +51,7 @@ namespace LouisvilleFun
                       act.FoodAvailable.Equals("Food Available"))
                       .ToArray();
 
-            Console.WriteLine("Activities for ages 18+ that serve food are:");
+            Console.WriteLine("Activities for ages 18+ and 21+ that serve food are:");
             foreach (var activity in notAllAgeFoodActivies)
             {
                 Console.WriteLine(activity.Name);
@@ -80,7 +80,7 @@ namespace LouisvilleFun
                           .ToArray();
 
             Console.WriteLine("Activities for ages 18+ that do not serve food are:");
-            foreach (var activity in allAgeFoodActivies)
+            foreach (var activity in notAllAgeNoFoodActivies)
             {
                 Console.WriteLine(activity.Name);
 
