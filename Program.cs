@@ -89,7 +89,7 @@ namespace LouisvilleFun
 
             Console.WriteLine("Find fun in Louisville");
 
-            Console.WriteLine("What fun Louisville activity would like information on?:");
+            Console.WriteLine("For what fun Louisville activity would like information?:");
             Console.WriteLine("\ta - Idlewild Butterfly Farm");
             Console.WriteLine("\tb - The Thirsty Pedaler");
             Console.WriteLine("\tc - Activate Games");
@@ -97,7 +97,7 @@ namespace LouisvilleFun
             Console.WriteLine("\te - Flying Axes");
             Console.WriteLine("\tf - Louisville Zoo");
             Console.WriteLine("\tg - Louisville Slugger Field");
-            Console.WriteLine("\th -The Comedy Caravan Club");
+            Console.WriteLine("\th - The Comedy Caravan Club");
             Console.Write("Tell me more about");
 
             switch(Console.ReadLine())
@@ -110,16 +110,16 @@ namespace LouisvilleFun
                     Console.WriteLine("Teetotalers beware! The Thirsty Pedaler is for ages 21+ and the cost is around $70.00 per person.");
                     break;
                 case "c":
-                    Console.WriteLine("Activate Games is for gamers age 10+ looking for a challenge! Participants can expect to pay about $25.00 each ");
+                    Console.WriteLine("Activate Games is for gamers age 10+ looking for a challenge! Participants can expect to pay about $25.00 each.");
                     break;
                 case "d":
-                    Console.WriteLine("All ages are welcome at The Slugger Museum for some baseball history! Tours are about $16.00 per person");
+                    Console.WriteLine("All ages are welcome at The Slugger Museum for some baseball history! Tours are about $16.00 per person.");
                     break;
                 case "e":
                     Console.WriteLine("Anyone 13+ can hurl your cares away at Flying Axes! Throwers will pay about $20.00 each.");
                     break;
                 case "f":
-                    Console.WriteLine("Anyone can explore their animal insticts at the Louisville Zoo! Admission is around $10.50 each and there are many dining options");
+                    Console.WriteLine("Anyone can explore their animal insticts at the Louisville Zoo! Admission is around $10.50 each and there are many dining options.");
                     break;
                 case "g":
                     Console.WriteLine("Baseball fans of all ages can enjoy peanuts and Crakcer Jacks at Louisville Slugger Field! Food is available and tickets are as little as $9.00 each.");
