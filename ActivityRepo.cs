@@ -24,7 +24,7 @@ namespace LouisvilleFun
 
         }
 
-        public IDictionary<int, Activity> ActivityDictionary { get; private set; } = new Dictionary<int, Activity, MoreActivities>();
+        public IDictionary<int, Activity> ActivityDictionary { get; private set; } = new Dictionary<int, Activity>();
 
 
 
@@ -35,4 +35,4 @@ namespace LouisvilleFun
         
         
 
-    }
+    

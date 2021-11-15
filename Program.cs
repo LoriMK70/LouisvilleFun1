@@ -14,7 +14,7 @@ namespace LouisvilleFun
             Activity activity4 = new Activity("Slugger Museum", 16.00, "All ages");
             Activity activity5 = new Activity("Flying Axes", 20.00, "13+");
             MoreActivities activity6 = new MoreActivities("Louisville Zoo", 10.50, "All ages", "Food Available");
-            MoreActivities activity7 = new MoreActivities("SLugger Museum", 16.00, "All ages", "Food Available");
+            MoreActivities activity7 = new MoreActivities("SLugger Field", 16.00, "All ages", "Food Available");
             MoreActivities activity8 = new MoreActivities("The Comedy Caravan Club", 17.00, "18+", "Food Available");
 
 
@@ -85,6 +85,57 @@ namespace LouisvilleFun
                 Console.WriteLine(activity.Name);
 
             }
+
+
+            Console.WriteLine("Find fun in Louisville");
+
+            Console.WriteLine("What fun Louisville activity would like information on?:");
+            Console.WriteLine("\ta - Idlewild Butterfly Farm");
+            Console.WriteLine("\tb - The Thirsty Pedaler");
+            Console.WriteLine("\tc - Activate Games");
+            Console.WriteLine("\td - Slugger Museum");
+            Console.WriteLine("\te - Flying Axes");
+            Console.WriteLine("\tf - Louisville Zoo");
+            Console.WriteLine("\tg - Louisville Slugger Field");
+            Console.WriteLine("\th -The Comedy Caravan Club");
+            Console.Write("Tell me more about");
+
+            switch(Console.ReadLine())
+
+            {
+                case "a":
+                    Console.WriteLine("Idlewild is fun for all ages.  Admission is around $10.00 per person if you want to experience the bug tour!");
+                    break;
+                case "b":
+                    Console.WriteLine("Teetotalers beware! The Thirsty Pedaler is for ages 21+ and the cost is around $70.00 per person.");
+                    break;
+                case "c":
+                    Console.WriteLine("Activate Games is for gamers age 10+ looking for a challenge! Participants can expect to pay about $25.00 each ");
+                    break;
+                case "d":
+                    Console.WriteLine("All ages are welcome at The Slugger Museum for some baseball history! Tours are about $16.00 per person");
+                    break;
+                case "e":
+                    Console.WriteLine("Anyone 13+ can hurl your cares away at Flying Axes! Throwers will pay about $20.00 each.");
+                    break;
+                case "f":
+                    Console.WriteLine("Anyone can explore their animal insticts at the Louisville Zoo! Admission is around $10.50 each and there are many dining options");
+                    break;
+                case "g":
+                    Console.WriteLine("Baseball fans of all ages can enjoy peanuts and Crakcer Jacks at Louisville Slugger Field! Food is available and tickets are as little as $9.00 each.");
+                    break;
+                case "h":
+                    Console.WriteLine("People 18+ can laugh the night away at The Comedy Caravan Club! Expect to pay around $17.00 each for a show and they also serve food.");
+                    break;
+
+
+
+
+            }
+
+            Console.WriteLine("Press any key to close");
+            Console.ReadKey();
+
 
         }
 
