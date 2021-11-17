@@ -189,13 +189,13 @@ namespace LouisvilleFun
                     Console.WriteLine("Anyone 13+ can hurl your cares away at Flying Axes! Throwers will pay about $20.00 each.");
                     break;
                 case "f":
-                    Console.WriteLine("Anyone can explore their animal insticts at the Louisville Zoo! Admission is around $10.50 each and there are many dining options.");
+                    Console.WriteLine("Anyone can explore their animal insticts at the Louisville Zoo! Admission is around $10.50 each.");
                     break;
                 case "g":
-                    Console.WriteLine("Baseball fans of all ages can enjoy peanuts and Crakcer Jacks at Louisville Slugger Field! Food is available and tickets are as little as $9.00 each.");
+                    Console.WriteLine("Baseball fans of all ages can enjoy peanuts and Crakcer Jacks at Louisville Slugger Field! Tickets are as little as $9.00 each.");
                     break;
                 case "h":
-                    Console.WriteLine("People 18+ can laugh the night away at The Comedy Caravan Club! Expect to pay around $17.00 each for a show and they also serve food.");
+                    Console.WriteLine("People 18+ can laugh the night away at The Comedy Caravan Club! Expect to pay around $17.00 each.");
                     break;
 
 
