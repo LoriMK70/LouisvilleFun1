@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace LouisvilleFun
 {
@@ -25,6 +26,19 @@ namespace LouisvilleFun
         }
 
         public IDictionary<int, Activity> ActivityDictionary { get; private set; } = new Dictionary<int, Activity>();
+
+        public List<MoreActivities> GetQuery()
+        {
+
+            List<MoreActivities> allActivities = new List<MoreActivities>();
+            foreach (var activity in ActivityDictionary.Select(s => s.Value))
+            {
+                var moreActivity = Nelibur.ObjectMapper.TinyMapper.Map<MoreActivities>(activity);
+                allActivities.Add(moreActivity);
+            }
+
+            return allActivities;
+        }
 
 
 

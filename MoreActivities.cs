@@ -7,15 +7,19 @@ namespace LouisvilleFun
     public class MoreActivities : Activity
     {
         public string FoodAvailable;
-        
-        
+
+        public MoreActivities() { }
+
+
         public MoreActivities(string name, double price, string age, string food)
             : base(name, price, age)
 
             {
       
                 this.FoodAvailable = food;
-            }
+
+
+        }
      }       
 
 }
