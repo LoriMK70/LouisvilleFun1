@@ -102,10 +102,6 @@ namespace LouisvilleFun
 
 
 
-
-
-
-
             var allAgeFoodActivies = activityrepo.GetQuery()
                 .Where(act => act.Age.Equals("All ages") &&
                 !string.IsNullOrEmpty(act.FoodAvailable) &&
@@ -113,8 +109,8 @@ namespace LouisvilleFun
                     .ToArray();
                     
 
-            Console.WriteLine("Activities for all ages that serve food are:");
-            foreach(var activity in allAgeFoodActivies)
+            Console.WriteLine("Activities for all ages that serve food are");
+            foreach (var activity in allAgeFoodActivies)
             {
                 Console.WriteLine(activity.Name);
 
@@ -127,7 +123,7 @@ namespace LouisvilleFun
                        .ToArray();
 
 
-            Console.WriteLine("Activities for ages 18+ and 21+ that serve food are:");
+            Console.WriteLine("Activities for ages 18+ and 21+ that serve food are");
             foreach (var activity in notAllAgeFoodActivies)
             {
                 Console.WriteLine(activity.Name);
@@ -140,8 +136,8 @@ namespace LouisvilleFun
                         act.FoodAvailable.Equals("Food Available"))
                         .ToArray();
 
-            Console.WriteLine("Activities for all ages that do not serve food are:");
-            foreach (var activity in allAgeFoodActivies)
+            Console.WriteLine("Activities for all ages that do not serve food are");
+            foreach (var activity in allAgeNoFoodActivies)
             {
                 Console.WriteLine(activity.Name);
 
@@ -153,7 +149,7 @@ namespace LouisvilleFun
                         act.FoodAvailable.Equals("Food AVailable"))
                         .ToArray();
 
-            Console.WriteLine("Activities for ages 18+ that do not serve food are:");
+            Console.WriteLine("Activities for ages 18+ that do not serve food are");
             foreach (var activity in notAllAgeNoFoodActivies)
             {
                 Console.WriteLine(activity.Name);
@@ -163,7 +159,7 @@ namespace LouisvilleFun
 
             Console.WriteLine("Find fun in Louisville");
 
-            Console.WriteLine("For what fun Louisville activity would like information?:");
+            Console.WriteLine("For what fun Louisville activity would like information?");
             Console.WriteLine("\ta - Idlewild Butterfly Farm");
             Console.WriteLine("\tb - The Thirsty Pedaler");
             Console.WriteLine("\tc - Activate Games");
