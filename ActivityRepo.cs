@@ -7,7 +7,7 @@ namespace LouisvilleFun
 {
     public class ActivityRepo
     {
-        public ActivityRepo()
+        private ActivityRepo()
         {
             ActivityDictionary = new Dictionary<int, Activity>();
 
@@ -25,7 +25,8 @@ namespace LouisvilleFun
 
         }
 
-        public IDictionary<int, Activity> ActivityDictionary { get; private set; } = new Dictionary<int, Activity>();
+        public IDictionary<int, Activity> ActivityDictionary { get; set; } = new Dictionary<int, Activity>();
+
 
         public List<MoreActivities> GetQuery()
         {

@@ -21,14 +21,14 @@ namespace LouisvilleFun
             ActivityRepo activityrepo = new ActivityRepo();
 
 
-            //activityrepo.ActivityDictionary.Add(1, activity1);
-            //activityrepo.ActivityDictionary.Add(2, activity2);
-            //activityrepo.ActivityDictionary.Add(3, activity3);
-            //activityrepo.ActivityDictionary.Add(4, activity4);
-            //activityrepo.ActivityDictionary.Add(5, activity5);
-            //activityrepo.ActivityDictionary.Add(6, activity6);
-            //activityrepo.ActivityDictionary.Add(7, activity7);
-            //activityrepo.ActivityDictionary.Add(8, activity8);
+            activityrepo.AddItem(1, activity1);
+            activityrepo.AddItem(2, activity2);
+            activityrepo.AddItem(3, activity3);
+            activityrepo.AddItem(4, activity4);
+            activityrepo.AddItem(5, activity5);
+            activityrepo.AddItem(6, activity6);
+            activityrepo.AddItem(7, activity7);
+            activityrepo.AddItem(8, activity8);
 
             Nelibur.ObjectMapper.TinyMapper.Bind<Activity, MoreActivities>();
             Nelibur.ObjectMapper.TinyMapper.Bind<MoreActivities, MoreActivities>();
@@ -38,14 +38,16 @@ namespace LouisvilleFun
 
                 Name = "Idlewild",
                 Price = 10.00,
-                Age = "All ages"
+                Age = "All ages",
+                Description = "Experience the bug tour!"
             };
 
             Activity activity2 = new Activity
             {
                 Name = "Thirsty Pedaler",
                 Price = 70.00,
-                Age = "21+"
+                Age = "21+",
+                Description = "Teetotalers beware!" 
 
             };
 
@@ -53,7 +55,8 @@ namespace LouisvilleFun
             {
                 Name = "Activate Games",
                 Price = 25.00,
-                Age = "10+"
+                Age = "10+",
+                Description = "Activate Games is for gamers looking for a challenge!"
 
             };
 
@@ -61,7 +64,8 @@ namespace LouisvilleFun
             {
                 Name = "Slugger Museum",
                 Price = 16.00,
-                Age = "All ages"
+                Age = "All ages",
+                Description = "The Slugger Museum offers up some baseball history!"
 
             };
 
@@ -69,7 +73,8 @@ namespace LouisvilleFun
             {
                 Name = "Flying Axes",
                 Price = 20.00,
-                Age = "13+"
+                Age = "13+",
+                Description = "You can hurl your cares away at Flying Axes!"
 
             };
 
@@ -78,6 +83,7 @@ namespace LouisvilleFun
                 Name = "Louisville Zoo",
                 Price = 10.50,
                 Age = "All ages",
+                Description = "Explore your animal insticts at the Louisville Zoo!",
                 FoodAvailable = "Food Avaliable"
 
             };
@@ -87,6 +93,7 @@ namespace LouisvilleFun
                 Name = "Slugger Field",
                 Price = 16.00,
                 Age = "All ages",
+                Description = "enjoy peanuts and Crakcer Jacks at Louisville Slugger Field!",
                 FoodAvailable = "Food Available"
 
             };
@@ -96,66 +103,14 @@ namespace LouisvilleFun
                 Name = "The Comedy Caravan Club",
                 Price = 17.00,
                 Age = "18+",
+                Description = "Laugh the night away at The Comedy Caravan Club!",
                 FoodAvailable = "Food Available"
 
             };
-
-
-
-            var allAgeFoodActivies = activityrepo.GetQuery()
-                .Where(act => act.Age.Equals("All ages") &&
-                !string.IsNullOrEmpty(act.FoodAvailable) &&
-                    act.FoodAvailable.Equals("Food Available"))
-                    .ToArray();
-                    
-
-            Console.WriteLine("Activities for all ages that serve food are");
-            foreach (var activity in allAgeFoodActivies)
-            {
-                Console.WriteLine(activity.Name);
-
-            }
-
-            var notAllAgeFoodActivies = activityrepo.GetQuery()
-                   .Where(act => act.Age.Equals("18+ && 21+") &&
-                   !string.IsNullOrEmpty(act.FoodAvailable) &&
-                       act.FoodAvailable.Equals("Food Available"))
-                       .ToArray();
-
-
-            Console.WriteLine("Activities for ages 18+ and 21+ that serve food are");
-            foreach (var activity in notAllAgeFoodActivies)
-            {
-                Console.WriteLine(activity.Name);
-
-            }
-
-            var allAgeNoFoodActivies = activityrepo.GetQuery()
-                    .Where(act => act.Age.Equals("All ages") &&
-                    !string.IsNullOrEmpty(act.FoodAvailable) &&
-                        act.FoodAvailable.Equals("Food Available"))
-                        .ToArray();
-
-            Console.WriteLine("Activities for all ages that do not serve food are");
-            foreach (var activity in allAgeNoFoodActivies)
-            {
-                Console.WriteLine(activity.Name);
-
-            }
-
-            var notAllAgeNoFoodActivies = activityrepo.GetQuery()
-                    .Where(act => act.Age.Equals("18+ && 21+") &&
-                    !string.IsNullOrEmpty(act.FoodAvailable) &&
-                        act.FoodAvailable.Equals("Food AVailable"))
-                        .ToArray();
-
-            Console.WriteLine("Activities for ages 18+ that do not serve food are");
-            foreach (var activity in notAllAgeNoFoodActivies)
-            {
-                Console.WriteLine(activity.Name);
-
-            }
-
+            NewMethod(activityrepo);
+            NewMethod1(activityrepo);
+            NewMethod2(activityrepo);
+            NewMethod3(activityrepo);
 
             Console.WriteLine("Find fun in Louisville");
 
@@ -169,18 +124,21 @@ namespace LouisvilleFun
             Console.WriteLine("\tg - Louisville Slugger Field");
             Console.WriteLine("\th - The Comedy Caravan Club");
             Console.Write("Tell me more about");
+            bool isMenuActive = true;
 
-            switch(Console.ReadLine())
+            while (isMenuActive)
+
+            switch (Console.ReadLine())
 
             {
                 case "a":
-                    Console.WriteLine("Idlewild is fun for all ages.  Admission is around $10.00 per person if you want to experience the bug tour!");
+                    Console.WriteLine;
                     break;
                 case "b":
-                    Console.WriteLine("Teetotalers beware! The Thirsty Pedaler is for ages 21+ and the cost is around $70.00 per person.");
+                    Console.WriteLine;
                     break;
                 case "c":
-                    Console.WriteLine("Activate Games is for gamers age 10+ looking for a challenge! Participants can expect to pay about $25.00 each.");
+                    Console.WriteLine;
                     break;
                 case "d":
                     Console.WriteLine("All ages are welcome at The Slugger Museum for some baseball history! Tours are about $16.00 per person.");
@@ -203,14 +161,79 @@ namespace LouisvilleFun
 
             }
 
-            Console.WriteLine("Press any key to close");
-            Console.ReadKey();
+            //Console.WriteLine("Press any key to close");
+            //Console.ReadKey();
 
 
         }
 
-        
-           
+        private static void NewMethod3(ActivityRepo activityrepo)
+        {
+            var notAllAgeNoFoodActivies = activityrepo.GetQuery()
+                                .Where(act => act.Age.Equals("18+") || act.Age.Equals("21+") &&
+                                !string.IsNullOrEmpty(act.FoodAvailable) &&
+                                    act.FoodAvailable.Equals("Food AVailable"))
+                                    .ToArray();
+
+            //Console.WriteLine("Activities for ages 18+ that do not serve food are");
+            foreach (var activity in notAllAgeNoFoodActivies)
+            {
+                Console.WriteLine("Activities for ages 18+ that do not serve food are" + activity.Name);
+
+            }
+        }
+
+        private static void NewMethod2(ActivityRepo activityrepo)
+        {
+            var allAgeNoFoodActivies = activityrepo.GetQuery()
+                                .Where(act => act.Age.Equals("All ages") &&
+                                !string.IsNullOrEmpty(act.FoodAvailable) &&
+                                    act.FoodAvailable.Equals("Food Available"))
+                                    .ToArray();
+
+            //Console.WriteLine("Activities for all ages that do not serve food are");
+            foreach (var activity in allAgeNoFoodActivies)
+            {
+                Console.WriteLine("Activities for all ages that do not serve food are" + activity.Name);
+
+            }
+        }
+
+        private static void NewMethod1(ActivityRepo activityrepo)
+        {
+            var notAllAgeFoodActivies = activityrepo.GetQuery()
+                               .Where(act => act.Age.Equals("18+") || act.Age.Equals("21+") &&
+                               !string.IsNullOrEmpty(act.FoodAvailable) &&
+                                   act.FoodAvailable.Equals("Food Available"))
+                                   .ToArray();
+
+
+            //Console.WriteLine("Activities for ages 18+ and 21+ that serve food are");
+            foreach (var activity in notAllAgeFoodActivies)
+            {
+                Console.WriteLine("Activities for ages 18+ and 21+ that serve food are" + activity.Name);
+
+            }
+        }
+
+        private static void NewMethod(ActivityRepo activityrepo)
+        {
+            var allAgeFoodActivies = activityrepo.GetQuery()
+                            .Where(act => act.Age.Equals("All ages") &&
+                            !string.IsNullOrEmpty(act.FoodAvailable) &&
+                                act.FoodAvailable.Equals("Food Available"))
+                                .ToArray();
+
+
+            //Console.WriteLine("Activities for all ages that serve food are");
+            foreach (var activity in allAgeFoodActivies)
+            {
+                Console.WriteLine("Activities for all ages that serve food are" + activity.Name);
+
+            }
+        }
+
+
     }
 }
 
