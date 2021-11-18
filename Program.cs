@@ -121,54 +121,43 @@ namespace LouisvilleFun
 
             while (isMenuActive)
 
-            //switch (Console.ReadLine())
+                switch (Console.ReadLine())
 
-                //{
-                //    case "a":
-                //        Console.WriteLine;
-                //        break;
-                //    case "b":
-                //        Console.WriteLine;
-                //        break;
-                //    case "c":
-                //        Console.WriteLine;
-                //        break;
-                //    case "d":
-                //        Console.WriteLine;
-                //        break;
-                //    case "e":
-                //        Console.WriteLine;
-                //        break;
-                //    case "f":
-                //        Console.WriteLine;
-                //        break;
-                //    case "g":
-                //        Console.WriteLine;
-                //        break;
-                //    case "h":
-                //        Console.WriteLine;
-                //        break;
-                //    case "i": isMenuActive = false;
+                {
+                    case "a":
+                        Console.WriteLine;
+                        break;
+                    case "b":
+                        Console.WriteLine;
+                        break;
+                    case "c":
+                        Console.WriteLine;
+                        break;
+                    case "d":
+                        Console.WriteLine;
+                        break;
+                    case "i":
+                        isMenuActive = false;
+                        break;
+
+
+
+                        //}
+
+                        //Console.WriteLine("Press any key to close");
+                        //Console.ReadKey();
 
 
 
 
-                //}
 
-                //Console.WriteLine("Press any key to close");
-                //Console.ReadKey();
-
-
-        
-
-            
-            ActivityRepo.AddItem()
+                   
             {
 
                 private static void NewMethod3(ActivityRepo activityrepo)
                 {
                     var notAllAgeNoFoodActivies = activityrepo.GetQuery()
-                                .Where(act => act.Age.Equals("18+") || act.Age.Equals("21+") &&
+                                .Where(act =>act.Age.Equals("10+") || act.Age.Equals("13+") || act.Age.Equals("18+") || act.Age.Equals("21+") &&
                                 !string.IsNullOrEmpty(act.FoodAvailable) &&
                                     act.FoodAvailable.Equals("Food AVailable"))
                                     .ToArray();
@@ -200,7 +189,7 @@ namespace LouisvilleFun
                 private static void NewMethod1(ActivityRepo activityrepo)
                 {
                     var notAllAgeFoodActivies = activityrepo.GetQuery()
-                                       .Where(act => act.Age.Equals("18+") || act.Age.Equals("21+") &&
+                                       .Where(act => act.Age.Equals("10+") || act.Age.Equals("13+") || act.Age.Equals("18+") || act.Age.Equals("21+") &&
                                        !string.IsNullOrEmpty(act.FoodAvailable) &&
                                            act.FoodAvailable.Equals("Food Available"))
                                            .ToArray();

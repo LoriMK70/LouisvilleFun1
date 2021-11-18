@@ -28,7 +28,7 @@ namespace LouisvilleFun
         public void AddItem(int id, Activity activity)
         {
 
-            ActivityDictionary.Add(id, Activity activity);
+            ActivityDictionary.Add(id, activity);
         }
 
         private IDictionary<int, Activity> ActivityDictionary { get; set; } = new Dictionary<int, Activity>();
