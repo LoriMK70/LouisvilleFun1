@@ -93,7 +93,7 @@ namespace LouisvilleFun
                 Name = "Slugger Field",
                 Price = 16.00,
                 Age = "All ages",
-                Description = "enjoy peanuts and Crakcer Jacks at Louisville Slugger Field!",
+                Description = "Enjoy peanuts and Crakcer Jacks at Louisville Slugger Field!",
                 FoodAvailable = "Food Available"
 
             };
@@ -141,20 +141,21 @@ namespace LouisvilleFun
                     Console.WriteLine;
                     break;
                 case "d":
-                    Console.WriteLine("All ages are welcome at The Slugger Museum for some baseball history! Tours are about $16.00 per person.");
+                    Console.WriteLine;
                     break;
                 case "e":
-                    Console.WriteLine("Anyone 13+ can hurl your cares away at Flying Axes! Throwers will pay about $20.00 each.");
+                    Console.WriteLine;
                     break;
                 case "f":
-                    Console.WriteLine("Anyone can explore their animal insticts at the Louisville Zoo! Admission is around $10.50 each.");
+                    Console.WriteLine;
                     break;
                 case "g":
-                    Console.WriteLine("Baseball fans of all ages can enjoy peanuts and Crakcer Jacks at Louisville Slugger Field! Tickets are as little as $9.00 each.");
+                    Console.WriteLine;
                     break;
                 case "h":
-                    Console.WriteLine("People 18+ can laugh the night away at The Comedy Caravan Club! Expect to pay around $17.00 each.");
+                    Console.WriteLine;
                     break;
+                case "i": isMenuActive = false;
 
 
 

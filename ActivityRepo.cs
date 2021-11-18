@@ -7,7 +7,7 @@ namespace LouisvilleFun
 {
     public class ActivityRepo
     {
-        private ActivityRepo()
+        public ActivityRepo()
         {
             ActivityDictionary = new Dictionary<int, Activity>();
 
