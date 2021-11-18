@@ -21,14 +21,14 @@ namespace LouisvilleFun
             ActivityRepo activityrepo = new ActivityRepo();
 
 
-            activityrepo.AddItem(1, activity1);
-            activityrepo.AddItem(2, activity2);
-            activityrepo.AddItem(3, activity3);
-            activityrepo.AddItem(4, activity4);
-            activityrepo.AddItem(5, activity5);
-            activityrepo.AddItem(6, activity6);
-            activityrepo.AddItem(7, activity7);
-            activityrepo.AddItem(8, activity8);
+            //activityrepo.AddItem(1, activity1);
+            //activityrepo.AddItem(2, activity2);
+            //activityrepo.AddItem(3, activity3);
+            //activityrepo.AddItem(4, activity4);
+            //activityrepo.AddItem(5, activity5);
+            //activityrepo.AddItem(6, activity6);
+            //activityrepo.AddItem(7, activity7);
+            //activityrepo.AddItem(8, activity8);
 
             Nelibur.ObjectMapper.TinyMapper.Bind<Activity, MoreActivities>();
             Nelibur.ObjectMapper.TinyMapper.Bind<MoreActivities, MoreActivities>();
@@ -107,133 +107,134 @@ namespace LouisvilleFun
                 FoodAvailable = "Food Available"
 
             };
-            NewMethod(activityrepo);
-            NewMethod1(activityrepo);
-            NewMethod2(activityrepo);
-            NewMethod3(activityrepo);
+            
 
             Console.WriteLine("Find fun in Louisville");
 
-            Console.WriteLine("For what fun Louisville activity would like information?");
-            Console.WriteLine("\ta - Idlewild Butterfly Farm");
-            Console.WriteLine("\tb - The Thirsty Pedaler");
-            Console.WriteLine("\tc - Activate Games");
-            Console.WriteLine("\td - Slugger Museum");
-            Console.WriteLine("\te - Flying Axes");
-            Console.WriteLine("\tf - Louisville Zoo");
-            Console.WriteLine("\tg - Louisville Slugger Field");
-            Console.WriteLine("\th - The Comedy Caravan Club");
+            Console.WriteLine("What fun Louisville activities would you like information?");
+            Console.WriteLine("\ta - Activites for all ages?");
+            Console.WriteLine("\tb - Activities with age restrictions?");
+            Console.WriteLine("\tc - Activities for all ages where food is available?");
+            Console.WriteLine("\td - Activites with age restrictions where food is available?");
             Console.Write("Tell me more about");
             bool isMenuActive = true;
 
             while (isMenuActive)
 
-            switch (Console.ReadLine())
+            //switch (Console.ReadLine())
 
+                //{
+                //    case "a":
+                //        Console.WriteLine;
+                //        break;
+                //    case "b":
+                //        Console.WriteLine;
+                //        break;
+                //    case "c":
+                //        Console.WriteLine;
+                //        break;
+                //    case "d":
+                //        Console.WriteLine;
+                //        break;
+                //    case "e":
+                //        Console.WriteLine;
+                //        break;
+                //    case "f":
+                //        Console.WriteLine;
+                //        break;
+                //    case "g":
+                //        Console.WriteLine;
+                //        break;
+                //    case "h":
+                //        Console.WriteLine;
+                //        break;
+                //    case "i": isMenuActive = false;
+
+
+
+
+                //}
+
+                //Console.WriteLine("Press any key to close");
+                //Console.ReadKey();
+
+
+        
+
+            
+            ActivityRepo.AddItem()
             {
-                case "a":
-                    Console.WriteLine;
-                    break;
-                case "b":
-                    Console.WriteLine;
-                    break;
-                case "c":
-                    Console.WriteLine;
-                    break;
-                case "d":
-                    Console.WriteLine;
-                    break;
-                case "e":
-                    Console.WriteLine;
-                    break;
-                case "f":
-                    Console.WriteLine;
-                    break;
-                case "g":
-                    Console.WriteLine;
-                    break;
-                case "h":
-                    Console.WriteLine;
-                    break;
-                case "i": isMenuActive = false;
 
-
-
-
-            }
-
-            //Console.WriteLine("Press any key to close");
-            //Console.ReadKey();
-
-
-        }
-
-        private static void NewMethod3(ActivityRepo activityrepo)
-        {
-            var notAllAgeNoFoodActivies = activityrepo.GetQuery()
+                private static void NewMethod3(ActivityRepo activityrepo)
+                {
+                    var notAllAgeNoFoodActivies = activityrepo.GetQuery()
                                 .Where(act => act.Age.Equals("18+") || act.Age.Equals("21+") &&
                                 !string.IsNullOrEmpty(act.FoodAvailable) &&
                                     act.FoodAvailable.Equals("Food AVailable"))
                                     .ToArray();
 
-            //Console.WriteLine("Activities for ages 18+ that do not serve food are");
-            foreach (var activity in notAllAgeNoFoodActivies)
-            {
-                Console.WriteLine("Activities for ages 18+ that do not serve food are" + activity.Name);
+
+                    foreach (var activity in notAllAgeNoFoodActivies)
+                    {
+                        Console.WriteLine("Activities for ages 18+ that do not serve food are" + activity.Name);
+
+                    }
+                }
+
+                private static void NewMethod2(ActivityRepo activityrepo)
+                {
+                    var allAgeNoFoodActivies = activityrepo.GetQuery()
+                                        .Where(act => act.Age.Equals("All ages") &&
+                                        !string.IsNullOrEmpty(act.FoodAvailable) &&
+                                            act.FoodAvailable.Equals("Food Available"))
+                                            .ToArray();
+
+
+                    foreach (var activity in allAgeNoFoodActivies)
+                    {
+                        Console.WriteLine("Activities for all ages that do not serve food are" + activity.Name);
+
+                    }
+                }
+
+                private static void NewMethod1(ActivityRepo activityrepo)
+                {
+                    var notAllAgeFoodActivies = activityrepo.GetQuery()
+                                       .Where(act => act.Age.Equals("18+") || act.Age.Equals("21+") &&
+                                       !string.IsNullOrEmpty(act.FoodAvailable) &&
+                                           act.FoodAvailable.Equals("Food Available"))
+                                           .ToArray();
+
+
+
+                    foreach (var activity in notAllAgeFoodActivies)
+                    {
+                        Console.WriteLine("Activities for ages 18+ and 21+ that serve food are" + activity.Name);
+
+                    }
+                }
+
+                private static void NewMethod(ActivityRepo activityrepo)
+                {
+
+                    var allAgeFoodActivies = activityrepo.GetQuery()
+                                    .Where(act => act.Age.Equals("All ages") &&
+                                    !string.IsNullOrEmpty(act.FoodAvailable) &&
+                                        act.FoodAvailable.Equals("Food Available"))
+                                        .ToArray();
+
+
+
+                    foreach (var activity in allAgeFoodActivies)
+                    {
+
+                        Console.WriteLine("Activities for all ages that serve food are" + activity.Name);
+
+                    }
+                }
+
 
             }
-        }
-
-        private static void NewMethod2(ActivityRepo activityrepo)
-        {
-            var allAgeNoFoodActivies = activityrepo.GetQuery()
-                                .Where(act => act.Age.Equals("All ages") &&
-                                !string.IsNullOrEmpty(act.FoodAvailable) &&
-                                    act.FoodAvailable.Equals("Food Available"))
-                                    .ToArray();
-
-            //Console.WriteLine("Activities for all ages that do not serve food are");
-            foreach (var activity in allAgeNoFoodActivies)
-            {
-                Console.WriteLine("Activities for all ages that do not serve food are" + activity.Name);
-
-            }
-        }
-
-        private static void NewMethod1(ActivityRepo activityrepo)
-        {
-            var notAllAgeFoodActivies = activityrepo.GetQuery()
-                               .Where(act => act.Age.Equals("18+") || act.Age.Equals("21+") &&
-                               !string.IsNullOrEmpty(act.FoodAvailable) &&
-                                   act.FoodAvailable.Equals("Food Available"))
-                                   .ToArray();
-
-
-            //Console.WriteLine("Activities for ages 18+ and 21+ that serve food are");
-            foreach (var activity in notAllAgeFoodActivies)
-            {
-                Console.WriteLine("Activities for ages 18+ and 21+ that serve food are" + activity.Name);
-
-            }
-        }
-
-        private static void NewMethod(ActivityRepo activityrepo)
-        {
-            var allAgeFoodActivies = activityrepo.GetQuery()
-                            .Where(act => act.Age.Equals("All ages") &&
-                            !string.IsNullOrEmpty(act.FoodAvailable) &&
-                                act.FoodAvailable.Equals("Food Available"))
-                                .ToArray();
-
-
-            //Console.WriteLine("Activities for all ages that serve food are");
-            foreach (var activity in allAgeFoodActivies)
-            {
-                Console.WriteLine("Activities for all ages that serve food are" + activity.Name);
-
-            }
-        }
-
 
     }
 }
