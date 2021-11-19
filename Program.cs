@@ -125,16 +125,16 @@ namespace LouisvilleFun
 
                 {
                     case "a":
-                        Console.WriteLine;
+                        Console.WriteLine(allAgeFoodActivies);
                         break;
                     case "b":
-                        Console.WriteLine;
+                        Console.WriteLine(notAllAgeFoodActivies);
                         break;
                     case "c":
-                        Console.WriteLine;
+                        Console.WriteLine(allAgeNoFoodActivies);
                         break;
                     case "d":
-                        Console.WriteLine;
+                        Console.WriteLine(notAllAgeNoFoodActivies);
                         break;
                     case "i":
                         isMenuActive = false;
@@ -142,11 +142,7 @@ namespace LouisvilleFun
 
 
 
-                        //}
-
-                        //Console.WriteLine("Press any key to close");
-                        //Console.ReadKey();
-
+                }      
 
 
 
@@ -154,7 +150,7 @@ namespace LouisvilleFun
                    
             {
 
-                private static void NewMethod3(ActivityRepo activityrepo)
+                private static void (ActivityRepo activityrepo)
                 {
                     var notAllAgeNoFoodActivies = activityrepo.GetQuery()
                                 .Where(act =>act.Age.Equals("10+") || act.Age.Equals("13+") || act.Age.Equals("18+") || act.Age.Equals("21+") &&
